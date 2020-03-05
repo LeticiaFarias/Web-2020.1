@@ -4,13 +4,21 @@ import ReactDOM from 'react-dom'
 // //import OlaMundo from './components/OlaMundo'
 // import Estudante from './components/Estudante'
 // import Professor from './components/Professor'
-import  {CapitaoAmerica as Ca, ViuvaNegra as Vn} from './components/Vingadores'
+//import  {CapitaoAmerica as Ca, ViuvaNegra as Vn} from './components/Vingadores'
+import Casa from './components/Casa'
+import Personagem from './components/Personagem'
 
 const root = document.getElementById('root')
 ReactDOM.render(<div>
-   <Ca nome='Jefferson' />
-   <Vn nome='Thomas' />
-   </div>, root);
+   <Casa/>
+   <Personagem/>
+   </div>, root)
+
+
+// ReactDOM.render(<div>
+//    <Ca nome='Jefferson' />
+//    <Vn nome='Thomas' />
+//    </div>, root);
    
 // ReactDOM.render(<Estudante nome='Letícia' idade='20' curso='Sistemas de Informação'
 //    cidadeNatal='Quixeramobim' />, root)
