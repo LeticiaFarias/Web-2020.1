@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-// //import OlaMundo from './components/OlaMundo'
+// import OlaMundo from './components/OlaMundo'
 // import Estudante from './components/Estudante'
 // import Professor from './components/Professor'
 //import  {CapitaoAmerica as Ca, ViuvaNegra as Vn} from './components/Vingadores'
@@ -22,18 +22,22 @@ ReactDOM.render(<div>
    
 // ReactDOM.render(<Estudante nome='Letícia' idade='20' curso='Sistemas de Informação'
 //    cidadeNatal='Quixeramobim' />, root)
+
 // ReactDOM.render(<div>
 //    <Professor nome='Jefferson' area='TI' nivel='D' curso='Si'/>
 //    <Estudante nome='Letícia' idade='20' curso='Sistemas de Informação'
 //    cidadeNatal='Quixeramobim'/>
 // </div>, root)
+
 // ReactDOM.render(<div>
 //    <CapitaoAmerica nome='Jefferson' />
 //    <ViuvaNegra nome='Thomas' />
 //    </div>, root);
+
 // ReactDOM.render(<OlaMundo nome='Letícia'/>, root)
 
 // ReactDOM.render('Olá mundo do React!', root)
+
 // ReactDOM.render(<h1>Olá mundo do React!</h1>, root)
 /*
 
