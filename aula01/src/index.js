@@ -1,18 +1,48 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+//import CasaGenerica from './components/CasaGenerica'
+//import Personagem from './components/Personagem'
+
 // import OlaMundo from './components/OlaMundo'
 // import Estudante from './components/Estudante'
 // import Professor from './components/Professor'
 //import  {CapitaoAmerica as Ca, ViuvaNegra as Vn} from './components/Vingadores'
-import Casa from './components/Casa'
-import Personagem from './components/Personagem'
+//import Casa from './components/Casa'
+//import Personagem from './components/Personagem'
+
+import IMCFuncao from './components/imc_funcao/IMCFuncao'
 
 const root = document.getElementById('root')
-ReactDOM.render(<div>
-   <Casa/>
-   <Personagem/>
-   </div>, root)
+ReactDOM.render(
+   <div>
+      <IMCFuncao peso={51} altura={1.69}/>
+   </div>, root
+)
+
+
+
+/*ReactDOM.render(
+   <div>
+      <h3>
+      <CasaGenerica>
+         <Personagem nome='Arya' casa='Stark'/>
+         <Personagem nome='John Snow' casa='Stark'/>
+         <Personagem nome='Sansa' casa='Stark'/>
+      </CasaGenerica> 
+      <CasaGenerica>
+         <Personagem nome='Robert' casa='Baratheon'/>
+      </CasaGenerica>
+      </h3>
+   </div>
+   , root
+)*/
+
+
+//ReactDOM.render(<div>
+  // <Casa/>
+  // <Personagem/>
+  // </div>, root)
 
 
 // ReactDOM.render(<div>
