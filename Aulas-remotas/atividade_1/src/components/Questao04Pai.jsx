@@ -15,13 +15,11 @@ import { Card, ListGroup } from "react-bootstrap";
 //    );
 // };
 
-
-
 export default class Questao04Pai extends Component {
    render() {
       return (
          <div>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "20rem" }}>
                <ListGroup variant="flush">
                   <ListGroup.Item>Nome: {this.props.nome} </ListGroup.Item>
                   <ListGroup.Item>Curso: {this.props.curso}</ListGroup.Item>
@@ -34,5 +32,3 @@ export default class Questao04Pai extends Component {
       );
    }
 }
-
-
