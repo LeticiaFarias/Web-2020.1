@@ -1,5 +1,5 @@
 <h1 align="center">
-	<a href="https://ibb.co/KXgYm2c"><img src="https://i.ibb.co/VtGd3g0/Desenvolvimento-de-Software-para-Web.png" alt="Desenvolvimento-de-Software-para-Web" border="0"></a>
+	<a href="https://ibb.co/4Nyrgd0"><img src="https://i.ibb.co/PCpHzQV/Design-sem-nome.png" alt="Design-sem-nome" width="811" height="202"></a>
 </h1>
 
 <p align="center">
