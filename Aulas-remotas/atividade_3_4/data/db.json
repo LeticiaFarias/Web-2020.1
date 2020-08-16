@@ -1,0 +1,10 @@
+{
+  "disciplinas": [
+    {
+      "nome": "CSGBD",
+      "curso": "Sistemas de informação",
+      "capacidade": "30",
+      "id": 1
+    }
+  ]
+}
