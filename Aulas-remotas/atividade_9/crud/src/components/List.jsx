@@ -12,10 +12,10 @@ const ListPage = () => (
 class List extends Component {
   constructor(props) {
     super(props);
-    this.state = { disciplinas: [] };
-    
+    this.state = { disciplinas: [], loading: false };
   }
   componentDidMount() {
+    this.setState({ loading: true })
     this.ref = this.props.firebase.getFirestore().collection("disciplinas");
     this.ref.onSnapshot(this.insertDisciplinas.bind(this));
   }
@@ -31,7 +31,7 @@ class List extends Component {
         capacidade,
       });
     });
-    this.setState({ disciplinas: disciplinas });
+    this.setState({ disciplinas: disciplinas, loading: false });
   }
 
   montarTabela() {
@@ -47,6 +47,19 @@ class List extends Component {
     });
   }
 
+  gerarConteudo() {
+    if (this.state.loading) {
+      return (
+        <tr>
+          <td colSpan="6" style={{ textAlign: "center" }}>
+            <div className="spinner-border" role="status">
+              <span className="sr-only">Loading...</span>
+            </div>
+          </td>
+        </tr>
+      );
+    } else return this.montarTabela();
+  }
   // deleteElementById(id) {
   //   let Disciplinas = this.state.disciplinas;
   //   for (let i = 0; i < Disciplinas.length; i++) {
