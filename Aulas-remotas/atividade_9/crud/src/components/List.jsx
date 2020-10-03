@@ -13,6 +13,7 @@ const ListPage = () => (
 class List extends Component {
   constructor(props) {
     super(props);
+    this._isMounted = false
     this.state = { disciplinas: [], loading: false };
   }
   componentDidMount() {
@@ -57,16 +58,7 @@ class List extends Component {
       );
     } else return this.montarTabela();
   }
-  // deleteElementById(id) {
-  //   let Disciplinas = this.state.disciplinas;
-  //   for (let i = 0; i < Disciplinas.length; i++) {
-  //     if (Disciplinas[i].id === id) {
-  //       Disciplinas.splice(i, 1);
-  //     }
-  //   }
-  //   this.setState({ disciplinas: Disciplinas });
-  // }
-
+  
   render() {
     return (
       <div>
