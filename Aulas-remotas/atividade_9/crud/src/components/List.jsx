@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TableRow from "./TableRow";
 
 import FirebaseContext from "../utils/FirebaseContext";
+import FirebaseService from "../services/FirebaseService";
 
 const ListPage = () => (
   <FirebaseContext.Consumer>
@@ -15,23 +16,19 @@ class List extends Component {
     this.state = { disciplinas: [], loading: false };
   }
   componentDidMount() {
-    this.setState({ loading: true })
-    this.ref = this.props.firebase.getFirestore().collection("disciplinas");
-    this.ref.onSnapshot(this.insertDisciplinas.bind(this));
+    this._isMounted = true;
+    this.setState({ loading: true });
+    FirebaseService.list(this.props.firebase.getFirestore(), (disiciplinas) => {
+      if (disiciplinas) {
+        if (this._isMounted) {
+          this.setState({ disiciplinas: disiciplinas, loading: false });
+        }
+      }
+    });
   }
 
-  insertDisciplinas(query) {
-    let disciplinas = [];
-    query.forEach((doc) => {
-      const { nome, curso, capacidade } = doc.data();
-      disciplinas.push({
-        id: doc.id,
-        nome,
-        curso,
-        capacidade,
-      });
-    });
-    this.setState({ disciplinas: disciplinas, loading: false });
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   montarTabela() {
@@ -86,7 +83,7 @@ class List extends Component {
               </th>
             </tr>
           </thead>
-          <tbody>{this.montarTabela()}</tbody>
+          <tbody>{this.gerarConteudo()}</tbody>
         </table>
       </div>
     );

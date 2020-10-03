@@ -1,21 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import FirebaseService from "../services/FirebaseService";
+
 export default class TableRow extends Component {
   constructor(props) {
     super(props);
     this.apagar = this.apagar.bind(this);
   }
+
   apagar(id, nome) {
     let resp = window.confirm(`Deseja apagar ${nome}?`);
     if (resp) {
-      this.props.firebase
-        .getFirestore()
-        .collection("disciplinas")
-        .doc(id)
-        .delete()
-        .then(() => console.log(`${nome} apagada!`))
-        .catch((error) => console.log(error));
+      FirebaseService.delete(
+        this.props.firebase.getFirestore(),
+        (mensagem) => {
+          if (mensagem === "OK") console.log(`${nome} apagada!`);
+        },
+        id
+      );
     }
   }
 
