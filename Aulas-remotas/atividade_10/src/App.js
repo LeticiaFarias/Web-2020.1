@@ -1,11 +1,21 @@
 import React from "react";
-import Container from "./styles/GlobalStyles"
+
+import Layout from "./components/Layout";
+import GlobalStyles from "./styles/GlobalStyles";
+import Mult from "./components/Mult/index";
+import Maior from "./components/Maior";
+import Soma from "./components/Soma";
 
 function App() {
   return (
-    <Container>
-      <h1>Hello World!</h1>
-    </Container>
+    <div>
+      <h1> Calculadora Redux</h1>
+      <Layout />,
+      <Mult />,
+      <Maior />,
+      <Soma />,
+      <GlobalStyles />
+    </div>
   );
 }
 

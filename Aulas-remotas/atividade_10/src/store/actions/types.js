@@ -1,0 +1,2 @@
+export const NOVO_NUMERO_UM = "NOVO_NUMERO_UM";
+export const NOVO_NUMERO_DOIS = "NOVO_NUMERO_DOIS";

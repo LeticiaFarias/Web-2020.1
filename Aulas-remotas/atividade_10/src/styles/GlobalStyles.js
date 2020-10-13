@@ -1,12 +1,11 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-const Container = styled.body`
-  background: #4a4e69;
-  font-display: auto;
-  color: #fdfffc;
-  font-size: 1.2ren;
-  font-family: Georgia, "Times New Roman", Times, serif;
+export default createGlobalStyle`
+  body {
+  background: #44344F;
+  color: aliceblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
   margin: 30px;
+  }
 `;
-
-export default Container;
