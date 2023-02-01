@@ -15,7 +15,7 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "mongoose": "^5.10.7",
+    "mongoose": "^5.13.15",
     "nodemon": "^2.0.4"
   }
 }
